@@ -424,8 +424,8 @@
         .faq-left h2 { font-size: 38px; color: #1d0333; font-weight: 800; margin-bottom: 25px; }
         .faq-right { flex: 1.4; }
         .faq-item { border-bottom: 1px solid #eee; padding: 20px 0; cursor: pointer; }
-        .faq-question { display: flex; align-items: center; justify-content: space-between; font-size: 18px; font-weight: 700; color: #1d0333; }
-        .faq-icon { font-size: 24px; color: #ff6a00; transition: transform 0.3s; }
+        .faq-question { display: flex; align-items: center; justify-content: flex-start; font-size: 18px; font-weight: 700; color: #1d0333; }
+        .faq-icon { font-size: 24px; color: #ff6a00; transition: transform 0.3s; padding-right: 10px; }
         .faq-answer { max-height: 0; overflow: hidden; transition: all 0.35s ease; color: #666; font-size: 16px; }
         .faq-item.active .faq-answer { max-height: 300px; padding-top: 15px; }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
