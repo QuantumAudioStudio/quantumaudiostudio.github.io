@@ -313,7 +313,7 @@
 
     createOrder: function(data, actions) {
       // RASTREO DE INICIO (FB Y GOOGLE)
-      if (typeof fbq !== 'undefined') { fbq('track', 'InitiateCheckout', { value: 27.00, currency: 'USD' }); }
+      if (typeof fbq !== 'undefined') { fbq('track', 'InitiateCheckout', { value: 497.00, currency: 'MXN' }); }
       if (typeof gtag !== 'undefined') { gtag('event', 'click_paypal', { 'metodo': 'paypal' }); }
 
       return actions.order.create({
