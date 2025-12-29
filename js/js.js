@@ -112,6 +112,7 @@ function renderPayPalModal() {
         style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'buynow', height: 50 },
         createOrder: function(data, actions) {
             fbq('track', 'InitiateCheckout', { value: 497, currency: 'MXN' });
+            gtag('event', 'click_paypal', { 'metodo': 'paypal' }); 
             return actions.order.create({
                 purchase_units: [{
                     description: "Audio Cuántico 369",
@@ -121,15 +122,23 @@ function renderPayPalModal() {
         },
         onApprove: function(data, actions) {
             return actions.order.capture().then(function(orderData) {
-                fbq('track', 'Purchase', { value: 497, currency: 'MXN' });
+                fbq('track', 'Purchase', { value: 497.00, currency: 'MXN' });
+                gtag('event', 'purchase', { value: 497.00, currency: 'MXN', transaction_id: orderData.id });
                 document.getElementById('payment-options-modal').innerHTML = `
-                    <div style="padding: 20px; background: #f0fdf4; border-radius: 15px; border: 1px solid #bcf0da;">
-                        <p style="color: #16a34a; font-weight: 700;">¡Pago Exitoso!</p>
-                        <a href="https://drive.google.com/drive/mobile/folders/1YPuxK_G2NPBspWDLld-R5yqTWY_Nwbxt" 
-                           style="display:inline-block; margin-top:10px; background:#16a34a; color:white; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:700;">
-                           Descargar Audio Aquí
-                        </a>
-                    </div>`;
+                    <div style="padding: 30px; background: #1a1a1a; border-radius: 20px; border: 1px solid #d4af37; text-align: center;">
+    <p style="color: #d4af37; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px;">¡Pago Verificado Exitosamente!</p>
+    <p style="color: #ffffff; margin-bottom: 20px; font-size: 0.9rem;">Tu acceso al portal cuántico ha sido habilitado.</p>
+    
+    <a href="https://quantumaudiostudio.github.io/vortex-369-authsys-data-authbienvenido-al-despertarcloud-storage-final/" 
+       style="display:inline-block; background: linear-gradient(45deg, #d4af37, #f4d03f); color: black; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);">
+        Acceder al Portal de Descarga
+    </a>
+
+    <div style="margin-top: 20px; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 8px;">
+        <p style="color: #b0b0b0; font-size: 0.8rem; margin: 0;">Tu Clave de Acceso es:</p>
+        <p style="color: #d4af37; font-weight: 700; font-size: 1.1rem; margin: 5px 0 0;">TESLA369</p>
+    </div>
+</div>`;
             });
         }
     }).render('#paypal-button-modal-container');

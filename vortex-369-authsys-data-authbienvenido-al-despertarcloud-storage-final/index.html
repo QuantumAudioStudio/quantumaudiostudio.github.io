@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Exclusivo | Quantum Audio Studio</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-gray: #b0b0b0;
+            --bonus-bg: #222;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 650px;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            margin: 20px;
+        }
+
+        .logo { font-weight: 700; letter-spacing: 2px; color: var(--gold); margin-bottom: 30px; text-transform: uppercase; }
+        h1 { font-size: 1.8rem; margin-bottom: 10px; }
+        .main-p { color: var(--text-gray); line-height: 1.6; margin-bottom: 30px; }
+
+        /* Tarjeta Principal */
+        .main-audio-card {
+            background: #000;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 2px solid var(--gold);
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: black;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        audio { width: 100%; filter: invert(100%) hue-rotate(180deg) brightness(1.5); height: 40px; margin: 15px 0; }
+
+        /* Botones */
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            color: black;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            width: auto;
+        }
+
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5); }
+
+        /* SECCIÓN DE BONOS */
+        .bonus-section {
+            margin-top: 40px;
+            text-align: left;
+            border-top: 1px solid #333;
+            padding-top: 30px;
+        }
+
+        .bonus-title {
+            color: var(--gold);
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bonus-item {
+            background: var(--bonus-bg);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #444;
+        }
+
+        .bonus-info h3 { margin: 0; font-size: 0.95rem; color: #fff; }
+        .bonus-info p { margin: 5px 0 0; font-size: 0.8rem; color: var(--text-gray); }
+
+        .btn-bonus {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-bonus:hover { background: var(--gold); color: black; }
+
+        .footer-note { font-size: 0.75rem; color: #555; margin-top: 40px; }
+        .gold-text { color: var(--gold); }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!--div>
+            <style>
+                .password {
+            max-width: 650px;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            margin: 20px;
+        }
+
+        /* ESTILOS DEL LOGIN */
+        #password { display: block; }
+        #ok { display: none; } /* Oculto por defecto */
+
+        input[type="password"] {
+            background: #000;
+            border: 1px solid var(--gold);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .btn-unlock {
+            background: var(--gold);
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+            </style>
+        <div id="password">
+            <div class="logo">Quantum Audio Studio</div>
+            <h1>Acceso Protegido</h1>
+            <p>Ingresa la clave de acceso enviada a tu correo tras la compra.</p>
+            <input type="password" id="passwordInput" placeholder="Contraseña">
+            <br>
+            <button class="btn-unlock" onclick="checkPassword()">Desbloquear Acceso</button>
+            <p id="errorMessage" style="color: #ff4d4d; margin-top: 15px; display: none;">Clave incorrecta. Inténtalo de nuevo.</p>
+        </div>
+        <script>
+        function checkPassword() {
+            const pass = document.getElementById('passwordInput').value;
+            // CAMBIA "TESLA369" POR LA CLAVE QUE TÚ QUIERAS
+            if (pass === "1") {
+                document.getElementById('password').style.display = 'none';
+                document.getElementById('ok').style.display = 'block';
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        }
+    </script>
+    </div-->
+        <div id="ok">
+        <div class="logo">Quantum Audio Studio</div>
+        
+        <h1>Tu Transformación <span class="gold-text">Ha Comenzado</span></h1>
+        <p class="main-p">Descarga tu audio principal y accede a tus regalos exclusivos por tiempo limitado.</p>
+
+        <div class="main-audio-card">
+            <div class="badge">Producto Principal</div>
+            <h2 style="margin-top:10px; font-size: 1.4rem;">Audio Cuántico 3-6-9 (HQ)</h2>
+            <audio controls controlsList="nodownload">
+                <source src="https://www.dropbox.com/scl/fi/3vrwqb55c68ww0ykroamh/Audio-Cu-tico-3-6-9-HZ.mp3?rlkey=wjjaunzojnld4gwtw5259iod9&st=hcpjr5x6&dl=1" type="audio/mpeg">
+            </audio>
+            <a href="https://www.dropbox.com/scl/fi/3vrwqb55c68ww0ykroamh/Audio-Cu-tico-3-6-9-HZ.mp3?rlkey=wjjaunzojnld4gwtw5259iod9&st=hcpjr5x6&dl=1" class="btn-primary">DESCARGAR</a>
+        </div>
+
+        <div class="bonus-section">
+            <div class="bonus-title">🎁 Bonos de Regalo Incluidos</div>
+
+            <div class="bonus-item">
+                <div class="bonus-info">
+                    <h3>Alineación de Chakras</h3>
+                    <p>Limpieza profunda de aura y energía.</p>
+                </div>
+                <a href="https://www.dropbox.com/scl/fi/mhi6rfhgjj1yuqhyln8fk/Alineacion-de-CHAKRAS-Limpiar-Aura.mp3?rlkey=i2ycgeck88c31ofglzitqn5ew&st=hi497bw7&dl=1" class="btn-bonus">Descargar</a>
+            </div>
+
+            <div class="bonus-item">
+                <div class="bonus-info">
+                    <h3>Liberación de Estrés</h3>
+                    <p>Frecuencia para insomnio y relajación.</p>
+                </div>
+                <a href="https://www.dropbox.com/scl/fi/du5wqqk75yjorf5lt6zvc/Audio-Relajante-Liberaci-n-del-Estr-s-e-Insomnio.mp3?rlkey=vlyv3dfylouveaw8ful0ha8k9&st=elqvgyax&dl=1" class="btn-bonus">Descargar</a>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>Se recomienda el uso de auriculares para todas las sesiones.<br>
+            © 2024 Quantum Audio Studio | Tecnología de Frecuencias Nikola Tesla.</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

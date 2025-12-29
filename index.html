@@ -10,7 +10,7 @@
     <meta name="keywords" content="audio 369, frecuencia tesla, manifestación, abundancia, reprogramación mental, nikola tesla frecuencias">
     <meta name="author" content="Quantum Audio">
     
-    <link rel="canonical" href="https://tu-dominio.com/">
+    <link rel="canonical" href="https://quantumaudiostudio.github.io/">
     <meta name="robots" content="noindex, nofollow">
     <!--meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"-->
 
@@ -18,16 +18,16 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Audio Cuántico 3-6-9 - Oferta Especial 70% OFF">
     <meta property="og:description" content="Únete a las más de 1,000 personas que han transformado su realidad con la frecuencia 3-6-9.">
-    <meta property="og:url" content="https://tu-dominio.com/">
+    <meta property="og:url" content="https://quantumaudiostudio.github.io/">
     <meta property="og:site_name" content="Quantum Audio">
-    <meta property="og:image" content="https://tu-dominio.com/assets/producto.jpg">
+    <meta property="og:image" content="https://quantumaudiostudio.github.io/assets/producto.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Audio Cuántico 3-6-9 | Frecuencia Tesla">
     <meta name="twitter:description" content="Descarga el sistema completo de manifestación cuántica. Oferta limitada.">
-    <meta name="twitter:image" content="https://tu-dominio.com/assets/producto.jpg">
+    <meta name="twitter:image" content="https://quantumaudiostudio.github.io/assets/producto.webp">
 
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="assets/favicon.svg">
@@ -48,7 +48,7 @@
   "@type": "Product",
   "name": "Audio Cuántico 3-6-9",
   "image": [
-    "https://tu-dominio.com/assets/producto.jpg"
+    "https://quantumaudiostudio.github.io/assets/producto.webp"
    ],
   "description": "Frecuencia de manifestación cuántica basada en el método 3-6-9 de Nikola Tesla para reprogramar la mente subconsciente.",
   "brand": {
@@ -57,7 +57,7 @@
   },
   "offers": {
     "@type": "Offer",
-    "url": "https://tu-dominio.com/",
+    "url": "https://quantumaudiostudio.github.io/",
     "priceCurrency": "MXN",
     "price": "497.00",
     "availability": "https://schema.org/InStock",
@@ -318,10 +318,10 @@
 
       return actions.order.create({
         purchase_units: [{
-          description: "Audio Milagroso 369 HZ Manifestación de Tesla",
+          description: "Audio Cuántico 369",
           amount: {
             currency_code: "MXN",
-            value: 499.99
+            value: 497.00
           }
         }]
       });
@@ -331,20 +331,25 @@
       return actions.order.capture().then(function(orderData) {
         
         // RASTREO DE COMPRA EXITOSA (FB Y GOOGLE)
-        if (typeof fbq !== 'undefined') { fbq('track', 'Purchase', { value: 27.00, currency: 'USD' }); }
-        if (typeof gtag !== 'undefined') { gtag('event', 'purchase', { value: 499.99, currency: 'MXN', transaction_id: orderData.id }); }
+        if (typeof fbq !== 'undefined') { fbq('track', 'Purchase', { value: 497.00, currency: 'MXN' }); }
+        if (typeof gtag !== 'undefined') { gtag('event', 'purchase', { value: 497.00, currency: 'MXN', transaction_id: orderData.id }); }
 
         // DISEÑO DE ÉXITO PREMIUM
         document.getElementById('paypal-button-container').innerHTML = `
-          <div style="background: #e6fffa; padding: 25px; border-radius: 16px; border: 2px solid #38b2ac; text-align: center; font-family: sans-serif;">
-            <p style="color: #234e52; font-weight: 800; font-size: 18px; margin-bottom: 10px;">¡PAGO CONFIRMADO!</p>
-            <p style="font-size: 14px; color: #2c7a7b; margin-bottom: 20px;">Tu acceso al Audio Cuántico 3-6-9 ya está listo.</p>
-            <a href="https://drive.google.com/drive/mobile/folders/1YPuxK_G2NPBspWDLld-R5yqTWY_Nwbxt" 
-               target="_blank" 
-               style="background: #38b2ac; color: white; text-decoration: none; padding: 14px 25px; border-radius: 10px; font-weight: 700; display: inline-block;">
-               DESCARGAR AUDIO AHORA
-            </a>
-          </div>`;
+          <div style="padding: 30px; background: #1a1a1a; border-radius: 20px; border: 1px solid #d4af37; text-align: center;">
+    <p style="color: #d4af37; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px;">¡Pago Verificado Exitosamente!</p>
+    <p style="color: #ffffff; margin-bottom: 20px; font-size: 0.9rem;">Tu acceso al portal cuántico ha sido habilitado.</p>
+    
+    <a href="https://quantumaudiostudio.github.io/vortex-369-authsys-data-authbienvenido-al-despertarcloud-storage-final/" 
+       style="display:inline-block; background: linear-gradient(45deg, #d4af37, #f4d03f); color: black; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);">
+        Acceder al Portal de Descarga
+    </a>
+
+    <div style="margin-top: 20px; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 8px;">
+        <p style="color: #b0b0b0; font-size: 0.8rem; margin: 0;">Tu Clave de Acceso es:</p>
+        <p style="color: #d4af37; font-weight: 700; font-size: 1.1rem; margin: 5px 0 0;">TESLA369</p>
+    </div>
+</div>`;
       });
     },
 
@@ -490,7 +495,20 @@
 
         </div>
     </section>
+<div style="padding: 30px; background: #1a1a1a; border-radius: 20px; border: 1px solid #d4af37; text-align: center;">
+    <p style="color: #d4af37; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px;">¡Pago Verificado Exitosamente!</p>
+    <p style="color: #ffffff; margin-bottom: 20px; font-size: 0.9rem;">Tu acceso al portal cuántico ha sido habilitado.</p>
+    
+    <a href="https://quantumaudiostudio.github.io/vortex-369-authsys-data-authbienvenido-al-despertarcloud-storage-final/" 
+       style="display:inline-block; background: linear-gradient(45deg, #d4af37, #f4d03f); color: black; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);">
+        Acceder al Portal de Descarga
+    </a>
 
+    <div style="margin-top: 20px; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 8px;">
+        <p style="color: #b0b0b0; font-size: 0.8rem; margin: 0;">Tu Clave de Acceso es:</p>
+        <p style="color: #d4af37; font-weight: 700; font-size: 1.1rem; margin: 5px 0 0;">TESLA369</p>
+    </div>
+</div>
     <script src="js/js.js"></script>
 </body>
 <footer style="padding: 40px 20px; text-align: center; color: #666; font-size: 13px; background: #f9f9f9;">
@@ -502,5 +520,4 @@
     </div>
     <p style="margin-top: 20px; font-size: 11px;">Este sitio no forma parte de Facebook ni de Meta Platforms, Inc.</p>
 </footer>
-
 </html>
