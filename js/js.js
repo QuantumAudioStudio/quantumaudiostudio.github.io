@@ -134,10 +134,10 @@ function renderPayPalModal() {
         Acceder al Portal de Descarga
     </a>
 
-    <div style="margin-top: 20px; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 8px;">
+    <!--div style="margin-top: 20px; padding: 10px; background: rgba(212, 175, 55, 0.1); border-radius: 8px;">
         <p style="color: #b0b0b0; font-size: 0.8rem; margin: 0;">Tu Clave de Acceso es:</p>
         <p style="color: #d4af37; font-weight: 700; font-size: 1.1rem; margin: 5px 0 0;">TESLA369</p>
-    </div>
+    </div-->
 </div>`;
             });
         }
