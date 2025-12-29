@@ -309,6 +309,8 @@
             text-align: center;
             position: relative;
             box-shadow: 0 15px 35px rgba(107, 78, 255, 0.1);
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .promo-badge {
@@ -435,6 +437,6 @@
         }
 
         @media (max-width: 900px) {
-            .offer-section, .faq-container { flex-direction: column; padding: 40px 20px; }
+            .offer-section, .faq-container { flex-direction: column; padding: 40px 10px; }
             .cta-link   {padding: 10px 40px;}
         }
