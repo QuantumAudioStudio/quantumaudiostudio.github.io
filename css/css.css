@@ -152,6 +152,15 @@
             .hero-section { flex-direction: column; text-align: center; padding-top: 100px; }
             .hero-right { display: none; }
             .cta-btn{padding:10px 27px}
+            .hero-content h1 {
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        .hero-content p {
+            margin-bottom: 45px;
+        }
+
         }
         /* --- ESTILOS SECCIÓN SOLO BENEFICIOS --- */
         .wellbeing-section {
