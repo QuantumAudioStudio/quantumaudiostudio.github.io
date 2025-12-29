@@ -459,7 +459,7 @@
     margin-bottom: 20px; font-weight: 700; color: #333;
 }
 
-.final a {
+.botonfinal {
     display: inline-block; background: linear-gradient(to right, #ff9d30, #ff6400); color: white; text-decoration: none; padding: 20px 40px; font-size: 20px; font-weight: 800; border-radius: 16px; box-shadow: 0 4px 15px rgba(255,100,0,0.3);
 }
 
@@ -475,7 +475,7 @@
         margin-bottom: 15px;
     }
 
-    .final a {
+    .botonfinal {
         display: block;        /* Ocupa todo el ancho disponible */
         width: 100%;           /* Asegura el ancho completo */
         max-width: 320px;      /* Pero que no sea gigante en tablets */
