@@ -437,6 +437,52 @@
         }
 
         @media (max-width: 900px) {
-            .offer-section, .faq-container { flex-direction: column; padding: 40px 10px; }
+            .offer-section, .faq-container { flex-direction: column; padding: 40px 20px; }
             .cta-link   {padding: 10px 40px;}
         }
+        @media (max-width: 768px) {
+    .faq-wrapper {
+        padding: 0; /* Esto quita los 60px y 40px por completo */
+        border-radius: 0; /* Opcional: si quieres que el fondo blanco toque los bordes */
+    }
+
+    .faq-container {
+        flex-direction: column; /* Esto hace que el FAQ no se vea amontonado */
+        gap: 20px;
+    }
+}
+
+.final{
+    margin-top: 50px; text-align: center; border-top: 1px solid #eee; padding-top: 40px;
+}
+.final p {
+    margin-bottom: 20px; font-weight: 700; color: #333;
+}
+
+.final a {
+    display: inline-block; background: linear-gradient(to right, #ff9d30, #ff6400); color: white; text-decoration: none; padding: 20px 40px; font-size: 20px; font-weight: 800; border-radius: 16px; box-shadow: 0 4px 15px rgba(255,100,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .final {
+        margin-top: 30px;      /* Reducimos espacio superior */
+        padding: 30px 15px;    /* Padding lateral para que no toque los bordes del cel */
+        border-top: 1px solid #eee;
+    }
+
+    .final p {
+        font-size: 16px;       /* Un poco más pequeño para que no grite */
+        margin-bottom: 15px;
+    }
+
+    .final a {
+        display: block;        /* Ocupa todo el ancho disponible */
+        width: 100%;           /* Asegura el ancho completo */
+        max-width: 320px;      /* Pero que no sea gigante en tablets */
+        margin: 0 auto;        /* Centra el bloque */
+        padding: 16px 20px;    /* Ajustamos el grosor del botón */
+        font-size: 18px;       /* Bajamos de 20px a 18px para que quepa en una línea */
+        letter-spacing: 0.5px; /* Mejora la lectura */
+        border-radius: 12px;   /* Un radio un poco más sutil para móviles */
+    }
+}
