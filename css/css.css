@@ -149,9 +149,9 @@
 
 
         @media (max-width: 900px) {
-            .hero-section { flex-direction: column; text-align: center; padding-top: 100px; }
+            .hero-section { flex-direction: column; padding-top: 100px; }
             .hero-right { display: none; }
-            .cta-btn{padding:10px 27px}
+            .cta-btn{padding:10px 27px; text-align: center;}
             .hero-content h1 {
             margin-bottom: 40px;
             margin-top: 40px;
