@@ -20,6 +20,27 @@
       fbq('track', 'PageView');
       fbq('track', 'Purchase', {value: 497.00, currency: 'MXN'});
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R8R4BTYSG5');
+  gtag('event', 'purchase', {
+      "transaction_id": "T_" + Math.floor(Math.random() * 1000000), 
+      "value": 497.00,
+      "currency": "MXN",
+      "items": [
+          {
+            "item_id": "AUDIO_369",
+            "item_name": "Audio Cuántico Nikola Tesla 369",
+            "price": 497.00,
+            "quantity": 1
+          }
+      ]
+  });
+</script>
     
     <style>
         body { background: #0a0a0a; color: white; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
