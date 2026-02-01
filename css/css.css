@@ -156,7 +156,7 @@
         @media (max-width: 900px) {
             .hero-section { flex-direction: column; padding-top: 100px; }
             .hero-right { display: none; }
-            .cta-btn{padding:10px 27px; text-align: center; margin-left: 50px;}
+            .cta-btn{padding:10px 27px; text-align: center;}
             .hero-content h1 {
             margin-bottom: 40px;
             margin-top: 40px;
@@ -526,7 +526,7 @@
     }
 }
 
-.palabra {margin-top: 7px;
+.palabra {margin-top: 25px;
 
 }
 
