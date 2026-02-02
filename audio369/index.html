@@ -842,13 +842,19 @@ document.querySelectorAll('.faq-question').forEach(button => {
     }, seconds * 1000);
 });
 
-// 5. Scroll a FAQ
+// 5. Scroll a FAQ (Versión Precisa)
 let faqReached = false;
 window.addEventListener('scroll', function() {
     const faq = document.querySelector('.faq-container');
     if (faq && !faqReached) {
         const pos = faq.getBoundingClientRect();
-        if (pos.top < window.innerHeight) {
+        
+        // Solo se activa si la parte superior de la FAQ 
+        // ya subió hasta la mitad de la pantalla del usuario
+        const esVisible = pos.top < (window.innerHeight / 1.5); 
+        
+        if (esVisible) {
+            console.log("FAQ detectada visualmente"); // Para que lo veas en consola
             if (typeof fbq !== 'undefined') fbq('trackCustom', 'LeyoFAQ');
             if (typeof gtag === 'function') gtag('event', 'scroll_to_faq');
             faqReached = true;
