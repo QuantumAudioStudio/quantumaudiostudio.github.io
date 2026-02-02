@@ -7,6 +7,45 @@
     <title>Audio 369 | Frecuencia Maestra</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4534011316829203');
+fbq('track', 'PageView');
+// 2. Registro de que está viendo el producto "Audio 369" (SE DISPARA INMEDIATO)
+  fbq('track', 'ViewContent', {
+      content_name: 'Audio 369 Quantum',
+      content_ids: ['A369'], // ID de tu producto
+      content_type: 'product',
+      value: 497.00,
+      currency: 'MXN'
+  });
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WB72QTWS');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R8R4BTYSG5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R8R4BTYSG5');
+</script>
     <style>
         :root {
     --bg: #05070a;
@@ -420,6 +459,143 @@ h3 {
     .final-cta h2 { font-size: 26px; }
     .final-cta { padding: 50px 20px; }
 }
+.benefits-premium {
+    display: grid;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.b-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.b-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.b-icon {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.b-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.b-text strong {
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.b-text span {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+.secure-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(52, 199, 89, 0.05); /* Fondo verde muy sutil */
+    border: 1px solid rgba(52, 199, 89, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.secure-badge span {
+    font-size: 12px;
+    color: #34c759; /* Color verde éxito */
+    letter-spacing: 0.3px;
+}
+
+.secure-badge strong {
+    font-weight: 700;
+}
+/* Separador con líneas finas */
+.other-methods {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+}
+
+.separator span {
+    padding: 0 15px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+}
+
+/* Contenedor para el botón de PayPal */
+.paypal-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* Separador sutil para el CTA final */
+.separator-small {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.separator-small::before, .separator-small::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.separator-small span {
+    padding: 0 10px;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
+/* Alineación de sellos finales */
+.trust-footer-cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.secure-badge-mini {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: var(--text-dim);
+}
     </style>
 </head>
 <body>
@@ -492,26 +668,48 @@ h3 {
             </div>
 
             <div class="actions">
-                <a href="TU_LINK_MERCADO_PAGO" class="btn-main" id="buy-btn">
+                <a href="https://mpago.la/1bT96HX" class="btn-main" id="buy-btn">
                     <span>COMPRAR AHORA</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <p class="secure-text">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    Pago encriptado por Mercado Pago
-                </p>
+                <div class="secure-badge">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+    </svg>
+    <span>Pago 100% encriptado por <strong>Mercado Pago</strong></span>
+</div>
+<div class="other-methods">
+        <div class="separator">
+            <span>Otros métodos de pago</span>
+        </div>
+        <script src="https://www.paypal.com/sdk/js?client-id=ASyyefG_WhN8TMD4nPvvX3VptCYN9w_JEqMATnnzSTps5amQn_Oo4DItnRU-fzi0UlrauBBIPtj6_XHS&currency=MXN"></script>
+        <div id="paypal-btn-1" class="paypal-wrapper">
+            </div>
+    </div>
             </div>
 
             <div class="benefits-premium">
-                <div class="b-item">
-                    <strong>Garantía de Satisfacción</strong>
-                    <span>7 días de prueba sin riesgos.</span>
-                </div>
-                <div class="b-item">
-                    <strong>Multi-dispositivo</strong>
-                    <span>Escucha en iOS, Android o PC.</span>
-                </div>
-            </div>
+    <div class="b-item">
+        <div class="b-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="b-text">
+            <strong>Garantía de Satisfacción</strong>
+            <span>7 días de prueba sin riesgos.</span>
+        </div>
+    </div>
+    
+    <div class="b-item">
+        <div class="b-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+        </div>
+        <div class="b-text">
+            <strong>Multi-dispositivo</strong>
+            <span>Escucha en iOS, Android o PC.</span>
+        </div>
+    </div>
+</div>
         </aside>
     </main>
     <div class="faq-container">
@@ -544,89 +742,31 @@ h3 {
         </div>
         <section class="final-cta">
     <div class="cta-content">
-        <h2>¿Listo para elevar tu vibración?</h2>
-        <p>Únete a las más de 1,250 personas que ya están reprogramando su realidad.</p>
-        
-        <a href="TU_LINK_MERCADO_PAGO" class="btn-main" id="buy-btn-final" style="max-width: 400px; margin: 30px auto;">
-            <span>SÍ, QUIERO ACCESO INMEDIATO</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        
+    <h2>¿Listo para elevar tu vibración?</h2>
+    <p>Únete a las más de 1,250 personas que ya están reprogramando su realidad.</p>
+    
+    <a href="https://mpago.la/1bT96HX" class="btn-main" id="buy-btn-final" style="max-width: 400px; margin: 30px auto 15px;">
+        <span>SÍ, QUIERO ACCESO INMEDIATO</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+
+    <div class="paypal-final-wrapper" style="max-width: 400px; margin: 0 auto 25px;">
+        <div class="separator-small"><span>O PAGA CON PAYPAL</span></div>
+        <div id="paypal-btn-2"></div>
+    </div>
+    
+    <div class="trust-footer-cta">
         <div class="guarantee-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Garantía de satisfacción de 7 días incluida</span>
+            <span>Garantía de 7 días</span>
+        </div>
+        <div class="secure-badge-mini">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Pago Encriptado</span>
         </div>
     </div>
+</div>
 </section>
-<script>
-    // 1. Inicialización del Píxel de Facebook
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!1;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    
-    // REEMPLAZA 'TU_ID_DE_PIXEL' con tu número real
-    fbq('init', 'TU_ID_DE_PIXEL'); 
-    fbq('track', 'PageView');
-
-// Seleccionamos TODOS los botones que empiecen con 'buy-btn'
-const buyButtons = document.querySelectorAll('[id^="buy-btn"]');
-
-buyButtons.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetUrl = this.getAttribute('href');
-        
-         // Micro-interacción: Cambiamos el estado del botón
-        this.style.opacity = '0.8';
-        this.style.pointerEvents = 'none';
-        this.innerHTML = `
-            <svg class="spinner" width="20" height="20" viewBox="0 0 50 50" style="animation: rotate 2s linear infinite;">
-                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="90,150"></circle>
-            </svg>
-            <span>PROCESANDO ACCESO...</span>
-        `;
-        
-        // Rastreo de Facebook (AddToCart / InitiateCheckout)
-        fbq('track', 'InitiateCheckout', {
-            content_name: 'Audio 369 Quantum',
-            value: 497.00,
-            currency: 'MXN'
-        });
-
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 800);
-    });
-});
-
-    // Estilo extra para la animación del spinner (puedes moverlo a tu CSS)
-    const style = document.createElement('style');
-    style.innerHTML = `
-        @keyframes rotate { 100% { transform: rotate(360deg); } }
-    `;
-    document.head.appendChild(style);
-</script>
-<script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-        button.addEventListener('click', () => {
-            const faqItem = button.parentElement;
-
-            // Cerrar otros items abiertos (opcional, quítalo si quieres varios abiertos)
-            document.querySelectorAll('.faq-item').forEach(item => {
-                if (item !== faqItem) item.classList.remove('active');
-            });
-
-            // Toggle del item actual
-            faqItem.classList.toggle('active');
-        });
-    });
-</script>
-</body>
 <footer style="padding: 40px 20px; text-align: center; color: #666; font-size: 13px;">
     <p>© 2024 Quantum Audio - Todos los derechos reservados.</p>
     <div style="margin-top: 10px;">
@@ -636,4 +776,139 @@ buyButtons.forEach(btn => {
     </div>
     <p style="margin-top: 20px; font-size: 11px;">Este sitio no forma parte de Facebook ni de Meta Platforms, Inc.</p>
 </footer>
+<script>
+// 1. ESTILOS PARA LA RUEDITA (Asegura que gire)
+const style = document.createElement('style');
+style.innerHTML = `
+    @keyframes rotate { 
+        100% { transform: rotate(360deg); } 
+    }
+    .spinner {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+`;
+document.head.appendChild(style);
+
+// 2. Lógica de los botones de compra
+const buyButtons = document.querySelectorAll('[id^="buy-btn"]');
+
+buyButtons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetUrl = this.getAttribute('href');
+        
+        // Cambio de estado visual
+        this.style.opacity = '0.8';
+        this.style.pointerEvents = 'none';
+        
+        // Insertamos el SVG con la animación 'rotate'
+        this.innerHTML = `
+            <svg class="spinner" width="20" height="20" viewBox="0 0 50 50" style="animation: rotate 1s linear infinite;">
+                <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="90,150"></circle>
+            </svg>
+            <span>PROCESANDO ACCESO...</span>
+        `;
+        
+        // Eventos de rastreo
+        fbq('track', 'InitiateCheckout', { content_name: 'Audio 369', value: 497.00, currency: 'MXN' });
+        if (typeof gtag === 'function') {
+            gtag('event', 'begin_checkout', { 
+                currency: 'MXN', 
+                value: 497.00, 
+                items: [{ item_id: 'A369', item_name: 'Audio 369', price: 497.00, quantity: 1 }] 
+            });
+        }
+
+        // Redirección tras breve pausa
+        setTimeout(() => { window.location.href = targetUrl; }, 800);
+    });
+});
+
+// 3. Acordeón FAQs
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
+    });
+});
+
+// 4. Timers de Retención (30, 45, 60s)
+[30, 45, 60].forEach(seconds => {
+    setTimeout(() => {
+        if(typeof fbq !== 'undefined' && seconds === 30) fbq('trackCustom', 'InteresElevado');
+        if(typeof gtag !== 'undefined') gtag('event', `tiempo_${seconds}s`, { 'event_category': 'Engagement' });
+    }, seconds * 1000);
+});
+
+// 5. Scroll a FAQ
+let faqReached = false;
+window.addEventListener('scroll', function() {
+    const faq = document.querySelector('.faq-container');
+    if (faq && !faqReached) {
+        const pos = faq.getBoundingClientRect();
+        if (pos.top < window.innerHeight) {
+            if (typeof fbq !== 'undefined') fbq('trackCustom', 'LeyoFAQ');
+            if (typeof gtag === 'function') gtag('event', 'scroll_to_faq');
+            faqReached = true;
+        }
+    }
+});
+// 1. Creamos la función con la lógica "maestra"
+function crearBotonPayPal(selector) {
+    paypal.Buttons({
+        style: { 
+            layout: 'vertical', 
+            color: 'gold', 
+            shape: 'rect', 
+            label: 'buynow', 
+            height: 45 
+        },
+        createOrder: function(data, actions) {
+            // 1. PRIMERO: RASTREO ESPECÍFICO (Si es el botón 2, registramos Carrito primero)
+    if (selector === '#paypal-btn-2') {
+        if (typeof fbq !== 'undefined') { 
+            fbq('track', 'AddToCart', { content_name: 'Audio 369 - Botón Inferior', value: 497.00, currency: 'MXN' }); 
+        }
+    }
+      // RASTREO DE INICIO (FB Y GOOGLE)
+      setTimeout(function() {
+      if (typeof fbq !== 'undefined') { fbq('track', 'InitiateCheckout', { value: 497.00, currency: 'MXN' }); }
+      if (typeof gtag !== 'undefined') { gtag('event', 'click_paypal', { 'metodo': 'paypal' }); }}, 50);
+
+      return actions.order.create({
+        purchase_units: [{
+          description: "Audio Cuántico 369",
+          amount: {
+            currency_code: "MXN",
+            value: 497.00
+          }
+        }]
+      });
+    },
+        onApprove: function(data, actions) {
+    return actions.order.capture().then(function(orderData) {
+
+        // 2. REDIRECCIÓN AUTOMÁTICA
+        // Esto envía al usuario directo a la página de descarga
+        window.location.href = "https://quantumaudiostudio.github.io/premiumquantumaudiogracias-por-su-pago";
+        
+    });
+},
+     onError: function(err) {
+      console.error('Error en el flujo de PayPal:', err);
+    }
+    }).render(selector);
+}
+
+// 2. Ejecutamos la función para cada ID cuando la página cargue
+window.addEventListener('load', function() {
+    if (window.paypal) {
+        crearBotonPayPal('#paypal-btn-1');
+        crearBotonPayPal('#paypal-btn-2');
+    }
+});
+</script>
+</body>
 </html>
