@@ -1034,60 +1034,7 @@ window.addEventListener('scroll', function() {
         }
     }
 });
-// 1. Creamos la función con la lógica "maestra"
-function crearBotonPayPal(selector) {
-    paypal.Buttons({
-        style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'buynow', height: 45 },
-        createOrder: function(data, actions) {
-            
-            // 1. Definimos la ubicación (Esta es la variable que faltaba conectar)
-            let ubicacion = 'arriba'; 
-            if (selector === '#paypal-btn-2') ubicacion = 'beneficios';
-            if (selector === '#paypal-btn-3') ubicacion = 'final';
-
-            // 2. RASTREO PARA GOOGLE ANALYTICS (Nombres de eventos visuales)
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'paypal_clic_' + ubicacion, {
-                    'metodo': 'paypal',
-                    'valor': 497.00
-                });
-            }
-
-            // 3. RASTREO PARA FACEBOOK (Iniciar Pago)
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'InitiateCheckout', { 
-                    value: 497.00, 
-                    currency: 'MXN',
-                    content_name: 'Audio 369 - ' + ubicacion 
-                });
-            }
-
-            return actions.order.create({
-                purchase_units: [{
-                    description: "Audio Cuántico 369",
-                    amount: { currency_code: "MXN", value: 497.00 }
-                }]
-            });
-        },
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(orderData) {
-                window.location.href = "https://quantumaudiostudio.github.io/premiumquantumaudiogracias-por-su-pago";
-            });
-        },
-        onError: function(err) {
-            console.error('Error en el flujo de PayPal:', err);
-        }
-    }).render(selector);
-}
-// Ejecución (Asegúrate que el primer ID coincida con tu HTML)
-window.addEventListener('load', function() {
-    if (window.paypal) {
-        // Si tu primer botón en el HTML sigue siendo 'paypal-button-container', cámbialo aquí:
-        crearBotonPayPal('#paypal-btn-1'); 
-        crearBotonPayPal('#paypal-btn-2');
-        crearBotonPayPal('#paypal-btn-3');
-    }
-});
 </script>
 </body>
+
 </html>
