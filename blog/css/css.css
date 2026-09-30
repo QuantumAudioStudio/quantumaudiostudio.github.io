@@ -449,3 +449,77 @@
     line-height: 1.6;
     margin-bottom: 20px;
 }
+/* ==========================================================================
+   SOLUCIÓN SCROLL HORIZONTAL Y OPTIMIZACIÓN MÓVIL
+   ========================================================================== */
+
+/* 1. Prevenir desbordamiento global */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevenir que textos largos o palabras romper el ancho del móvil */
+p, h1, h2, h3, li, span {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* 2. Envolver y hacer responsiva la tabla de comparación */
+.comparison-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Permite scroll solo dentro de la tabla */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap; /* Evita que la tabla se colapse feo */
+}
+
+/* 3. Ajustes específicos para pantallas de teléfono (menores a 768px) */
+@media (max-width: 768px) {
+    /* Reducir padding interno del artículo para ganar espacio */
+    .article-body {
+        padding: 0 15px 60px;
+        font-size: 17px;
+    }
+
+    /* Ajustar imágenes para que nunca sobrepasen la pantalla */
+    .featured-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ajuste de la caja de CTA */
+    .cta-box {
+        padding: 25px 15px;
+        margin: 40px 0;
+        border-radius: 20px;
+    }
+
+    .cta-box h3 {
+        font-size: 20px;
+    }
+
+    /* Ajuste de los botones CTA para que se adapten al ancho en móvil */
+    .cta-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px 15px;
+        font-size: 15px;
+        text-align: center;
+        white-space: normal; /* Permite que el texto del botón dé salto de línea si es largo */
+    }
+
+    /* Ajustes de tarjetas visuales en el artículo */
+    .alert-card, 
+    .testimonial-card {
+        padding: 18px;
+        margin: 20px 0;
+    }
+
+    .pull-quote {
+        font-size: 1.2rem;
+        padding: 0 10px;
+        margin: 25px 0;
+    }
+}
