@@ -331,3 +331,121 @@
             color: white;
             font-size: 18px;
         }
+/* ==========================================================================
+   ESTILOS MEJORADOS PARA EL CONTENIDO DEL ARTÍCULO (.article-body)
+   ========================================================================== */
+
+/* Párrafos e interlineado para lectura fluida */
+.article-body p {
+    line-height: 1.75;
+    margin-bottom: 24px;
+    color: var(--text-gray);
+}
+
+/* Encabezados dentro del texto */
+.article-body h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.article-body h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+/* Énfasis y resaltados de texto */
+.article-body strong, 
+.article-body b {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.article-body em, 
+.article-body i {
+    color: #d1c8e2;
+    font-style: italic;
+}
+
+/* Listas (ul / ol) bien espaciadas y legibles */
+.article-body ul, 
+.article-body ol {
+    margin: 0 0 30px 24px;
+    padding-left: 10px;
+}
+
+.article-body li {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: var(--text-gray);
+}
+
+.article-body li strong, 
+.article-body li b {
+    color: #ffffff;
+}
+
+/* Tablas con diseño oscuro/neón si llegas a usarlas */
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 32px 0;
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-body th, 
+.article-body td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 16px;
+}
+
+.article-body th {
+    background: rgba(107, 78, 255, 0.15);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.article-body td {
+    color: var(--text-gray);
+}
+
+.article-body tr:last-child td {
+    border-bottom: none;
+}
+
+/* Citas destacadas (Blockquotes) */
+.article-body blockquote {
+    border-left: 4px solid var(--purple);
+    background: rgba(107, 78, 255, 0.08);
+    margin: 32px 0;
+    padding: 20px 24px;
+    border-radius: 0 16px 16px 0;
+    font-style: italic;
+    color: #e2dbed;
+}
+
+/* Ajustes de estilo dentro de las Cajas CTA */
+.cta-box h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.cta-box p {
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
