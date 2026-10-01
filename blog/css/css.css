@@ -1801,3 +1801,134 @@ p, h1, h2, h3, li, span {
     .secret-headline { font-size: 17px !important; }
     .secret-cta-btn { font-size: 14px; padding: 14px 18px; }
 }
+/* SECCIÓN FULL-WIDTH DE ARTÍCULOS RELACIONADOS */
+.related-posts-container {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(10, 8, 20, 0) 0%, rgba(18, 14, 38, 0.8) 20%, rgba(12, 10, 26, 1) 100%);
+    border-top: 1px solid rgba(107, 78, 255, 0.25);
+    padding: 60px 20px;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+/* Contenedor interno centrado que evita que las tarjetas toquen las orillas en pantallas gigantes */
+.related-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título de la sección con un toque sutil de brillo */
+.related-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 35px;
+    text-align: left;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.related-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #6b4eff, #00f2fe);
+    border-radius: 2px;
+}
+
+/* Rejilla de tarjetas adaptables */
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo de la tarjeta estilo 'Dark Glass' */
+.related-card {
+    background: rgba(25, 20, 48, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.related-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(107, 78, 255, 0.4);
+    box-shadow: 0 12px 30px rgba(107, 78, 255, 0.18);
+    background: rgba(30, 24, 58, 0.7);
+}
+
+/* Enlace e imagen miniatura */
+.related-img-link {
+    display: block;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+}
+
+.related-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.related-card:hover .related-img {
+    transform: scale(1.06);
+}
+
+/* Cuerpo de la tarjeta */
+.related-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.related-badge {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #00f2fe;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    background: rgba(0, 242, 254, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.related-card-title {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.related-card-title a {
+    color: #f8f9fa;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.related-card-title a:hover {
+    color: #00f2fe;
+}
+
+.related-excerpt {
+    font-size: 0.88rem;
+    color: #a0a5b5;
+    line-height: 1.55;
+    margin: 0;
+    flex-grow: 1;
+}
