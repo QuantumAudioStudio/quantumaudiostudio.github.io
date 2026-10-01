@@ -256,7 +256,7 @@
 
                 card.innerHTML = `
                     <a href="/blog/${art.slug}" class="related-img-link">
-                        <img src="${art.imagen}" alt="${art.titulo}" class="related-img" loading="lazy">
+                        <img src="${art.imagen}" alt="${art.alt || art.titulo}" class="related-img" loading="lazy">
                     </a>
                     <div class="related-content">
                         <span class="related-badge">${art.categoria}</span>
