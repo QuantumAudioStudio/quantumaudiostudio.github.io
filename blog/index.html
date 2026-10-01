@@ -9,7 +9,6 @@
     
     <link rel="canonical" href="https://quantumaudiostudio.com/blog/">
     <meta name="robots" content="index, follow">
-    
     <meta property="og:title" content="Quantum Audio | Blog">
     <meta property="og:description" content="¿Estás listo para hackear tu realidad? Descubre el poder de las frecuencias que Tesla ocultó al mundo.">
     <meta property="og:image" content="../assets/muchacha.webp">
@@ -91,42 +90,67 @@
     <h1>Explora el Blog</h1>
 </header>
 
-<main class="blog-container">
-    
-    <a href="secreto-tesla/" class="article-card card-large">
-        <img src="assets/secreto-tesla.webp" class="card-img" alt="Tesla">
-        <div class="card-content">
-            <span class="category-pill">Neurociencia & Sonido</span>
-            <h2>El Secreto Oculto de Nikola Tesla y las Frecuencias 3-6-9</h2>
-            <p>Por qué los científicos más grandes de la historia usaban patrones numéricos.</p>
-        </div>
-    </a>
-
-    <a href="mejor-hora-escuchar-frecuencia-369/" class="article-card card-small">
-        <img src="assets/mejor-hora-para-escuchar-audio-369.jpg" class="card-img" alt="Guía">
-        <div class="card-content">
-            <span class="category-pill">Neurociencia & Sonido</span>
-            <h2>¿Cuál es la Mejor Hora para Escuchar la Frecuencia 369 y Potenciar sus Efectos?</h2>
-        </div>
-    </a>
-
-    <a href="errores-comunes-metodo-369/" class="article-card card-medium">
-        <img src="assets/errores-al-usar-el-audio-369.jpg" class="card-img" alt="Frecuencias">
-        <div class="card-content">
-            <span class="category-pill">Neurociencia & Sonido</span>
-            <h2>3 Errores Comunes al Usar el Método 369 (y Cómo Corregirlos en 15 Minutos)</h2>
-        </div>
-    </a>
-
-    <a href="audio-cuantico-vs-youtube/" class="article-card card-medium">
-        <img src="assets/audio-cuantico-vs-audio-gratuito-youtube.jpg" class="card-img" alt="Frecuencias">
-        <div class="card-content">
-            <span class="category-pill">Neurociencia & Sonido</span>
-            <h2>Audio Cuántico vs. Audios de YouTube: La Razón por la que No Logras Enfocar Tu Mente</h2>
-        </div>
-    </a>
-
+<main class="blog-container" id="main-blog-container">
+    <!-- Mensaje mientras carga el JSON -->
+    <p style="color: #888; text-align: center; width: 100%; grid-column: 1 / -1; padding: 40px 0;">
+        Cargando publicaciones...
+    </p>
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const blogContainer = document.getElementById("main-blog-container");
+    if (!blogContainer) return;
+
+    fetch("/blog/articulos.json")
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((articulos) => {
+            blogContainer.innerHTML = ""; // Limpiar el mensaje de carga
+
+            if (!articulos || articulos.length === 0) {
+                blogContainer.innerHTML = `<p style="color: #888; text-align: center; width: 100%;">Próximamente nuevas publicaciones.</p>`;
+                return;
+            }
+
+            // Renderizar cada artículo con las clases exactas de tu CSS
+            articulos.forEach((art, index) => {
+                // Asignar clase de tamaño según la posición del artículo
+                let cardClass = "card-medium"; // Clase por defecto
+
+                if (index === 0) {
+                    cardClass = "card-large"; // El primer artículo siempre es el destacado grande
+                } else if (index === 1) {
+                    cardClass = "card-small"; // El segundo es pequeño
+                }
+
+                const card = document.createElement("a");
+                card.href = `/blog/${art.slug}/`;
+                card.className = `article-card ${cardClass}`;
+
+                // Construcción interna respetando tu estructura HTML original
+                card.innerHTML = `
+                    <img src="${art.imagen}" class="card-img" alt="${art.alt || art.titulo}" loading="lazy">
+                    <div class="card-content">
+                        <span class="category-pill">${art.categoria}</span>
+                        <h2>${art.titulo}</h2>
+                        ${art.descripcion && index === 0 ? `<p>${art.descripcion}</p>` : ''}
+                    </div>
+                `;
+
+                blogContainer.appendChild(card);
+            });
+        })
+        .catch((err) => {
+            console.error("Error al cargar los artículos en la portada:", err);
+            blogContainer.innerHTML = `<p style="color: #666; text-align: center; width: 100%;">No se pudieron cargar las publicaciones en este momento.</p>`;
+        });
+});
+</script>
 
 <script src="js/js.js"></script>
 
