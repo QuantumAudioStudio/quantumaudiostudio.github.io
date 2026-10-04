@@ -2,6 +2,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scrollbar-width: none;
         }
 :root {
             --bg: #0b0214;
@@ -467,7 +468,6 @@ p, h1, h2, h3, li, span {
 
 /* 2. Envolver y hacer responsiva la tabla de comparación */
 .comparison-table {
-    display: block;
     width: 100%;
     overflow-x: auto; /* Permite scroll solo dentro de la tabla */
     -webkit-overflow-scrolling: touch;
