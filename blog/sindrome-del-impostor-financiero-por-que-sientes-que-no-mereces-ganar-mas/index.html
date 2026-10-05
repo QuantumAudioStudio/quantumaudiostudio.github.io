@@ -29,6 +29,8 @@
     <link rel="apple-touch-icon" href="../assets/favicon.svg">
 
     <!-- Fuentes y CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/css.css">
 
@@ -73,7 +75,7 @@
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1" alt=""
     /></noscript>
     <!-- End Meta Pixel Code -->
 
@@ -149,10 +151,19 @@
         color: #00f2fe;
     }
 
+    /* ENVOLTORIO RESPONSIVO PARA LA TABLA */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 35px 0;
+        border-radius: 10px;
+    }
+
     .comparison-table {
         width: 100%;
+        min-width: 600px;
         border-collapse: collapse;
-        margin: 35px 0;
         background: rgba(10, 5, 20, 0.6);
         border-radius: 10px;
         overflow: hidden;
@@ -227,7 +238,7 @@
             Quantum Audio
         </a>
 
-        <div class="menu-toggle" id="mobile-menu">
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú de navegación">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -292,7 +303,7 @@
         <p>No se trata de falta de capacidad intelectual ni de escasez de oportunidades en el mercado. Es una barrera de contención biológica colocada en la profundidad de tus patrones neuronales. Cada vez que intentas cruzar el umbral de ingresos habitual, tu mente subconsciente percibe la riqueza como un territorio peligroso y activa mecanismos inconscientes de autosabotaje para mantenerte en lo que considera tu "zona segura".</p>
 
         <div class="alert-card">
-            <h4>⚠️ EL TECHO DE CRISTAL SUBCONSCIENTE</h4>
+            <h4>⚠ EL TECHO DE CRISTAL SUBCONSCIENTE</h4>
             <p>El dinero no responde únicamente a la lógica de tus horas trabajadas; responde a tu nivel de tolerancia interna para recibirlo. Si tu sistema nervioso asocia ganar más con traición familiar, culpa o peligro de ser expuesto, sabotearás cada ingreso extra sin darte cuenta.</p>
         </div>
 
@@ -323,37 +334,40 @@
 
         <p>La causa de esta falta de resultados radica en un factor técnico determinante: los algoritmos de compresión. Las plataformas en línea comprimen los archivos de audio utilizando formatos MP3 o AAC para optimizar espacio y ancho de banda. En este proceso de compresión destructiva, se eliminan las frecuencias agudas y graves extremas que el oído humano apenas percibe, pero que son precisamente los impulsos encargados de inducir el arrastre de ondas cerebrales.</p>
 
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Criterio de Evaluación</th>
-                    <th>Audios Gratuitos en Plataformas (MP3)</th>
-                    <th>QuantumAudio® (Formato WAV Máster 24-Bit)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <li><b>Calidad de la Señal</b></li>
-                    <li>Comprimida (Pérdida del 70% de datos frecuenciales)</li>
-                    <li>Espectro Puro HD (Sin compresión ni recortes)</li>
-                </tr>
-                <tr>
-                    <li><b>Efecto Neuroacústico</b></li>
-                    <li>Música ambiental sin impacto subcortical</li>
-                    <li>Sincronización Hemisférica Real (Efecto FFR)</li>
-                </tr>
-                <tr>
-                    <li><b>Modalidad de Uso</b></li>
-                    <li>Requiere concentración o meditación activa</li>
-                    <li>Escucha 100% Pasiva (Funciona en reposo)</li>
-                </tr>
-                <tr>
-                    <li><b>Respuesta Subconsciente</b></li>
-                    <li>Bloqueada por el filtro analítico consciente</li>
-                    <li>Reconfiguración directa de creencias limitantes</li>
-                </tr>
-            </tbody>
-        </table>
+        <!-- ENVOLTORIO AÑADIDO PARA EVITAR QUE SE DESBORDE EN MÓVILES -->
+        <div class="table-responsive">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Criterio de Evaluación</th>
+                        <th scope="col">Audios Gratuitos en Plataformas (MP3)</th>
+                        <th scope="col">QuantumAudio® (Formato WAV Máster 24-Bit)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Calidad de la Señal</b></td>
+                        <td>Comprimida (Pérdida del 70% de datos frecuenciales)</td>
+                        <td>Espectro Puro HD (Sin compresión ni recortes)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Efecto Neuroacústico</b></td>
+                        <td>Música ambiental sin impacto subcortical</td>
+                        <td>Sincronización Hemisférica Real (Efecto FFR)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Modalidad de Uso</b></td>
+                        <td>Requiere concentración o meditación activa</td>
+                        <td>Escucha 100% Pasiva (Funciona en reposo)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Respuesta Subconsciente</b></td>
+                        <td>Bloqueada por el filtro analítico consciente</td>
+                        <td>Reconfiguración directa de creencias limitantes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- PRIMER CTA BOX (GANCHO O INTERRUPCION) -->
         <div class="cta-box">

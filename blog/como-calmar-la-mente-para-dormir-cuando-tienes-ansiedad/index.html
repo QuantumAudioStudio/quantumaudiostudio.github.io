@@ -111,7 +111,31 @@
         width: 0%;
         transition: width 0.1s ease-out;
     }
-
+.comparison-table-wrapper {
+        overflow-x: auto;
+        margin: 40px 0;
+    }
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .comparison-table th, .comparison-table td {
+        padding: 18px 22px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .comparison-table th {
+        background: rgba(107, 78, 255, 0.18);
+        color: #fff;
+        font-weight: 700;
+    }
+    .comparison-table tr:last-child td {
+        border-bottom: none;
+    }
     /* COMPONENTES UI Y ESTILOS PERSONALIZADOS DE ALTO IMPACTO */
     .alert-card {
         background: rgba(255, 77, 77, 0.08);
@@ -149,27 +173,7 @@
         color: #00f2fe;
     }
 
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 35px 0;
-        background: rgba(10, 5, 20, 0.6);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .comparison-table th, .comparison-table td {
-        padding: 15px 20px;
-        text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .comparison-table th {
-        background: rgba(107, 78, 255, 0.2);
-        color: #fff;
-        font-size: 1rem;
-    }
-
+    
     .badge-live {
         display: inline-block;
         background: #ff0055;
@@ -326,39 +330,39 @@
         <p>Si alguna vez has buscado un <b>audio binaural para dormir en 5 minutos sin pastillas</b> en plataformas gratuitas como YouTube o Spotify y sentiste que no tuvo ningún efecto real, no estás loco. Hay una explicación técnica inobjetable que la mayoría de creadores de contenido de relajación ocultan por conveniencia comercial.</p>
 
         <p>Las plataformas de streaming utilizan algoritmos de compresión feroz (como la conversión a MP3 o AAC a 128 kbps). Este proceso de compresión elimina las microfrecuencias inaudibles y los armónicos puros para reducir el peso del archivo de video. Desafortunadamente, <b>son precisamente esas microfrecuencias cortadas las que contienen el estímulo neuroacústico</b> encargado de inducir el arrastre de ondas cerebrales. Escuchar frecuencias binaurales comprimidas en YouTube es el equivalente sonoro a tomar un placebo diluido en agua.</p>
-
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Característica</th>
-                    <th>YouTube / Spotify (Audio Comprimido)</th>
-                    <th>QuantumAudio® (Máster 24-Bit WAV)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <li><b>Formato de Audio</b></li>
-                    <li>MP3 / AAC (Pérdida de datos agresiva)</li>
-                    <li>WAV Puro sin compresión (Studio Quality)</li>
-                </tr>
-                <tr>
-                    <li><b>Efectividad Neuroacústica</b></li>
-                    <li>Mínima o nula (Microfrecuencias recortadas)</li>
-                    <li>100% de retención de fase vibracional</li>
-                </tr>
-                <tr>
-                    <li><b>Respuesta Cerebral</b></li>
-                    <li>Efecto relajante superficial por ruido blanco</li>
-                    <li>Sincronización hemisférica profunda e inmediata</li>
-                </tr>
-                <tr>
-                    <li><b>Esfuerzo Requerido</b></li>
-                    <li>Intentar concentrarse ignorando la fatiga</li>
-                    <li>Escucha 100% pasiva (Efecto físico directo)</li>
-                </tr>
-            </tbody>
-        </table>
-
+    <div class="comparison-table-wrapper">
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th scope="col">Característica</th>
+                <th scope="col">YouTube / Spotify (Audio Comprimido)</th>
+                <th scope="col" class="highlight-cell">QuantumAudio® (Máster 24-Bit WAV)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Formato de Audio</th>
+                <td>MP3 / AAC (Pérdida de datos agresiva)</td>
+                <td class="highlight-cell">WAV Puro sin compresión (Studio Quality)</td>
+            </tr>
+            <tr>
+                <th scope="row">Efectividad Neuroacústica</th>
+                <td>Mínima o nula (Microfrecuencias recortadas)</td>
+                <td class="highlight-cell">100% de retención de fase vibracional</td>
+            </tr>
+            <tr>
+                <th scope="row">Respuesta Cerebral</th>
+                <td>Efecto relajante superficial por ruido blanco</td>
+                <td class="highlight-cell">Sincronización hemisférica profunda e inmediata</td>
+            </tr>
+            <tr>
+                <th scope="row">Esfuerzo Requerido</th>
+                <td>Intentar concentrarse ignorando la fatiga</td>
+                <td class="highlight-cell">Escucha 100% pasiva (Efecto físico directo)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
         <!-- PRIMER CTA BOX (GANCHO O INTERRUPCION) -->
         <div class="cta-box">
             <h3>¿Cansado de dar vueltas en la cama sin poder apagar tu cerebro?</h3>
