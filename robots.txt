@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /privacidad/
+Disallow: /terminos/
+Disallow: /descargo/
+Disallow: /gracias/
+Disallow: /vortex-369-authsys-data-authbienvenido-al-despertarcloud-storage-final/
+
+Sitemap: https://quantumaudiostudio.com/sitemap.xml
