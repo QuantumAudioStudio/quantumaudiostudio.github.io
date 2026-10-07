@@ -7,10 +7,10 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://quantumaudiostudio.com/acerca</loc>
+    <loc>https://quantumaudiostudio.com/blog/acerca</loc>
     <lastmod>2026-09-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quantumaudiostudio.com/blog/</loc>
@@ -27,6 +27,12 @@
   <url>
     <loc>https://quantumaudiostudio.com/blog/audio-cuantico-vs-youtube</loc>
     <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quantumaudiostudio.com/blog/como-aliviar-la-ansiedad-rapidamente-sin-medicamentos</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,6 +67,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://quantumaudiostudio.com/blog/como-hacer-que-mi-ex-vuelva-arrepentido</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://quantumaudiostudio.com/blog/como-manifestar-a-una-persona-para-que-te-hable</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -85,6 +97,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://quantumaudiostudio.com/blog/frecuencia-369-hz-para-manifestar-dinero-rapido</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://quantumaudiostudio.com/blog/mejor-hora-escuchar-frecuencia-369</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -99,6 +117,24 @@
   <url>
     <loc>https://quantumaudiostudio.com/blog/por-que-te-despiertas-a-las-3-am-que-hacer-neurociencia</loc>
     <lastmod>2026-10-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quantumaudiostudio.com/blog/porque-siempre-veo-el-numero-1111</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quantumaudiostudio.com/blog/que-es-el-efecto-mandela-y-ejemplos-reales</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://quantumaudiostudio.com/blog/que-es-la-ley-de-atraccion</loc>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
