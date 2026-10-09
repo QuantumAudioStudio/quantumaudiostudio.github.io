@@ -137,22 +137,26 @@
 
             // Renderizar cada artículo con las clases exactas de tu CSS
             articulos.forEach((art, index) => {
-                // Asignar clase de tamaño según la posición del artículo
-                let cardClass = "card-medium"; // Clase por defecto
+                let cardClass = "card-medium";
 
                 if (index === 0) {
-                    cardClass = "card-large"; // El primer artículo siempre es el destacado grande
+                    cardClass = "card-large";
                 } else if (index === 1) {
-                    cardClass = "card-small"; // El segundo es pequeño
+                    cardClass = "card-small";
                 }
 
                 const card = document.createElement("a");
                 card.href = `/blog/${art.slug}/`;
                 card.className = `article-card ${cardClass}`;
 
-                // Construcción interna respetando tu estructura HTML original
+                // ✔️ Si es el primer artículo (portada LCP), usamos fetchpriority="high" sin lazy.
+                // Del segundo en adelante sí llevan loading="lazy".
+                const imgAttributes = index === 0 
+                    ? 'fetchpriority="high"' 
+                    : 'loading="lazy"';
+
                 card.innerHTML = `
-                    <img src="${art.imagen}" class="card-img" alt="${art.alt || art.titulo}" loading="lazy">
+                    <img src="${art.imagen}" class="card-img" alt="${art.alt || art.titulo}" ${imgAttributes}>
                     <div class="card-content">
                         <span class="category-pill">${art.categoria}</span>
                         <h2>${art.titulo}</h2>
