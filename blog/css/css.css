@@ -282,6 +282,7 @@
     margin: 40px auto; /* El 'auto' en los lados izquierdo y derecho es lo que centra la imagen */
     border-radius: 24px;
     border: 1px solid rgba(255,255,255,0.1);
+    height: auto;
 }
         /* CAJA DE LLAMADO A LA ACCIÓN (CTA) */
         .cta-box {
@@ -486,6 +487,7 @@ p, h1, h2, h3, li, span {
     .featured-image {
         width: 100%;
         max-width: 100%;
+        height: auto;
     }
 
     /* Ajuste de la caja de CTA */
