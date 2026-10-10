@@ -369,6 +369,13 @@
     font-weight: 700;
 }
 
+.article-body a,
+.related-card-title a {
+    color: #ffffff !important;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
 .article-body em, 
 .article-body i {
     color: #d1c8e2;
