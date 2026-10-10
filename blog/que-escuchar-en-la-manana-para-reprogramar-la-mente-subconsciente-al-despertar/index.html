@@ -32,9 +32,12 @@
   <link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
   <link href="../assets/favicon.svg" rel="apple-touch-icon"/>
   <!-- Fuentes y CSS -->
+  
+    <!-- CSS Cargado Asíncronamente -->
   <link as="style" href="../css/css.css" rel="preload"/>
-  <link href="../css/css.css" rel="stylesheet"/>
-  <!-- Datos Estructurados Schema.org (SEO Avanzado para Google) -->
+  <link href="../css/css.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="../css/css.css" rel="stylesheet"/></noscript>
+<!-- Datos Estructurados Schema.org (SEO Avanzado para Google) -->
   <script type="application/ld+json">
    {
       "@context": "https://schema.org",
@@ -259,6 +262,7 @@
     </li>
    </ul>
   </nav>
+  <main>
   <header class="article-header">
    <span class="meta-info">
     Manifestación • 9 min de lectura
@@ -669,6 +673,7 @@
   </section>
   <script src="../js/js.js">
   </script>
+    </main>
   <footer style="padding: 100px 5%; background: #07010d; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
    <p style="color: #6b4eff; font-weight: 800; font-size: 24px; margin-bottom: 20px;">
     Quantum Audio

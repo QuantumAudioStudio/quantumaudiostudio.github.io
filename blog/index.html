@@ -31,9 +31,12 @@
   <meta content="#1d0333" name="theme-color"/>
   <meta content="yes" name="apple-mobile-web-app-capable"/>
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-  <link as="style" href="css/css.css" rel="preload"/>
-  <link href="css/css.css" rel="stylesheet"/>
-  <!-- Meta Pixel Code -->
+  
+    <!-- CSS Cargado Asíncronamente -->
+  <link as="style" href="../css/css.css" rel="preload"/>
+  <link href="../css/css.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="../css/css.css" rel="stylesheet"/></noscript>
+<!-- Meta Pixel Code -->
   <script>
    !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
