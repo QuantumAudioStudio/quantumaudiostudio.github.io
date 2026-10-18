@@ -1941,7 +1941,3 @@ p, h1, h2, h3, li, span {
     margin: 0;
     flex-grow: 1;
 }
-.comparison-table-wrapper {
-        overflow-x: auto;
-        margin: 35px 0;
-    }
