@@ -61,9 +61,164 @@
         }
 
         /* ======================
-           SECCIONES NUEVAS / MEJORADAS
+           NAVEGACIÓN SUPERIOR Y SECCIONES MAESTRAS
            ====================== */
-        
+        .top-nav {
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            z-index: 2000;
+        }
+
+        .nav-menu-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu-links a {
+            color: #1d0333;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu-links a:hover {
+            color: #6b4eff;
+        }
+
+        /* Bloque "Artículos del Blog" para AdSense */
+        .blog-preview-section {
+            max-width: 1100px;
+            margin: 70px auto 40px;
+            padding: 0 20px;
+        }
+
+        .blog-preview-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blog-preview-header h2 {
+            font-size: clamp(26px, 4vw, 36px);
+            color: #1d0333;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .blog-preview-header p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .blog-card {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #eaeaea;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(107, 78, 255, 0.12);
+        }
+
+        .blog-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .blog-card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .blog-card-tag {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #6b4eff;
+            background: #f0ecff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            align-self: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .blog-card-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #1d0333;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .blog-card-desc {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 18px;
+            flex: 1;
+        }
+
+        .blog-card-link {
+            font-size: 13px;
+            font-weight: 800;
+            color: #ff6a00;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Bloque "Acerca de Nosotros" */
+        .about-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px 30px;
+            background: #fdfbff;
+            border-radius: 20px;
+            border: 1px solid #f0e8ff;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 26px;
+            color: #1d0333;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .about-section p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+        }
+
         /* 1. Bloque "Para Quién Es Esto"  */
         .for-whom-section {
             max-width: 1100px;
@@ -284,6 +439,11 @@
 
         /* Responsive Ajustes */
         @media (max-width: 768px) {
+            .nav-menu-links {
+                gap: 12px;
+                font-size: 12px;
+            }
+
             .for-whom-section {
                 grid-template-columns: 1fr;
                 gap: 0;
@@ -402,6 +562,7 @@
   }]
 }
 </script>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -419,6 +580,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -444,6 +606,11 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
         <div class="logo-icon">369</div>
         Quantum Audio
     </a>
+    <ul class="nav-menu-links">
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+        <li><a href="#comprar">Oferta</a></li>
+    </ul>
 </nav>
 
 <section class="hero-section">
@@ -526,6 +693,83 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
             <h3>Reprogramación</h3>
             <p>Tu mente subconsciente absorbe la nueva frecuencia, eliminando bloqueos de estrés, insomnio y escasez.</p>
         </div>
+    </div>
+</section>
+
+<!-- SECCIÓN DE ARTÍCULOS DESTACADOS DEL BLOG (LLAVE MAESTRA PARA ADSENSE) -->
+<section class="blog-preview-section">
+    <div class="blog-preview-header">
+        <h2>Aprende en Nuestro Blog</h2>
+        <p>Explora nuestros articulos sobre neuroacústica, frecuencias 369 Hz y desarrollo subconsciente.</p>
+    </div>
+    <div class="blog-grid">
+        
+        <!-- Articulo 1 -->
+        <article class="blog-card">
+            <img src="https://quantumaudiostudio.com/blog/assets/que-es-el-patron-de-tesla.webp" alt="Símbolo del Eneagrama e iluminación de patrón Tesla" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <span class="blog-card-tag">Manifestación</span>
+                <h3 class="blog-card-title">¿Qué es el patrón de Tesla? La clave matemática 3-6-9</h3>
+                <p class="blog-card-desc">Descubre el significado del código 369 de Nikola Tesla y cómo la resonancia neuroacústica reprograma el subconsciente.</p>
+                <a href="/blog/que-es-el-patron-de-tesla/" class="blog-card-link">Leer lección completa →</a>
+            </div>
+        </article>
+
+        <!-- Articulo 2 -->
+        <article class="blog-card">
+            <img src="https://quantumaudiostudio.com/blog/assets/que-son-los-audios-binaurales.webp" alt="Mujer feliz escuchando audios binaurales en HD" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <span class="blog-card-tag">Neuroacústica</span>
+                <h3 class="blog-card-title">¿Qué son los audios binaurales y cómo funcionan?</h3>
+                <p class="blog-card-desc">La ciencia detrás de las ondas cerebrales en el subconsciente y por qué la compresión MP3 destruye su efecto real.</p>
+                <a href="/blog/que-son-los-audios-binaurales/" class="blog-card-link">Leer lección completa →</a>
+            </div>
+        </article>
+
+        <!-- Articulo 3 -->
+        <article class="blog-card">
+            <img src="https://quantumaudiostudio.com/blog/assets/frecuencia-369-hz-para-manifestar-dinero-rapido.webp" alt="Ondas doradas de energía armónica representando la frecuencia 369 hz" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <span class="blog-card-tag">Manifestación</span>
+                <h3 class="blog-card-title">Frecuencia 369 Hz para Manifestar Dinero Rápido</h3>
+                <p class="blog-card-desc">Descubre cómo usar la frecuencia 369 Hz para reprogramar tu mente, desbloquear la abundancia y eliminar deudas.</p>
+                <a href="/blog/frecuencia-369-hz-para-manifestar-dinero-rapido/" class="blog-card-link">Leer lección completa →</a>
+            </div>
+        </article>
+
+        <!-- Articulo 4 -->
+        <article class="blog-card">
+            <img src="https://quantumaudiostudio.com/blog/assets/como-aliviar-la-ansiedad-rapidamente-sin-medicamentos.webp" alt="Persona experimentando alivio de la tensión y serenidad mental" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <span class="blog-card-tag">Salud & Sueño</span>
+                <h3 class="blog-card-title">Cómo Aliviar la Ansiedad Rápidamente sin Fármacos</h3>
+                <p class="blog-card-desc">Aprende a estimular el sistema nervioso parasimpático y reducir el estrés nocturno mediante tecnología neuroacústica.</p>
+                <a href="/blog/como-aliviar-la-ansiedad-rapidamente-sin-medicamentos/" class="blog-card-link">Leer lección completa →</a>
+            </div>
+        </article>
+
+        <!-- Articulo 5 -->
+        <article class="blog-card">
+            <img src="https://quantumaudiostudio.com/blog/assets/hiperconcentracion-brain-flow.webp" alt="Persona en estado de concentración profunda frente a la computadora" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <span class="blog-card-tag">Neuroacústica</span>
+                <h3 class="blog-card-title">Cómo entrar en estado de hiperconcentración rápido</h3>
+                <p class="blog-card-desc">Descubre cómo entrar en estado de Flow para estudiar o trabajar mediante la ciencia del audio neuroacústico HD.</p>
+                <a href="/blog/como-entrar-en-estado-de-hiperconcentracion-rapido-para-estudiar-o-trabajar/" class="blog-card-link">Leer lección completa →</a>
+            </div>
+        </article>
+
+        <!-- Articulo 6 -->
+        <article class="blog-card">
+            <img src="https://quantumaudiostudio.com/blog/assets/como-meditar-para-manifestar-facilmente.webp" alt="Persona realizando meditación activa para manifestación" class="blog-card-img" loading="lazy">
+            <div class="blog-card-body">
+                <span class="blog-card-tag">Manifestación</span>
+                <h3 class="blog-card-title">Cómo Meditar para Manifestar Fácilmente (Sin Luchar)</h3>
+                <p class="blog-card-desc">Usa el código 369 de Tesla y neuroacústica pura sin forzar tu mente ni perder la concentración durante tu práctica.</p>
+                <a href="/blog/como-meditar-para-manifestar-facilmente/" class="blog-card-link">Leer lección completa →</a>
+            </div>
+        </article>
+
     </div>
 </section>
 
@@ -740,6 +984,12 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
     </div>
 </section>
 
+<!-- SECCIÓN ACERCA DE QUANTUM AUDIO (TRANSPARENCIA INSTITUCIONAL E-E-A-T) -->
+<section class="about-section" id="acerca">
+    <h2>Acerca de QuantumAudio®</h2>
+    <p>Somos un laboratorio de investigación acústica enfocado en la neuroestimulación sonora, la psicoacústica y el desarrollo del potencial subconsciente. Nuestra misión es crear herramientas sonoras de alta definición (24-Bit WAV sin compresión) que ayuden a regular el sistema nervioso, acelerar el enfoque profundo y disolver patrones de estrés o insomnio de forma completamente pasiva y segura.</p>
+</section>
+
 <script src="js/js.js"></script>
 <script>
     setTimeout(function(){
@@ -760,6 +1010,7 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
 <footer style="padding: 40px 20px; text-align: center; color: #666; font-size: 13px; background: #f9f9f9;">
     <p>© 2026 Quantum Audio - Todos los derechos reservados.</p>
     <div style="margin-top: 10px;">
+        <a href="/blog/" style="color: #666; margin: 0 10px;">Blog</a> | 
         <a href="privacidad/" style="color: #666; margin: 0 10px;">Privacidad</a> | 
         <a href="terminos/" style="color: #666; margin: 0 10px;">Términos</a> | 
         <a href="descargo/" style="color: #666; margin: 0 10px;">Descargo de Responsabilidad</a>
