@@ -835,7 +835,14 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
 </section>
 
 <script src="../js/js.js"></script>
-
+<script>
+[15,30, 45, 60].forEach(seconds => {
+    setTimeout(() => {
+        if(typeof fbq !== 'undefined' && seconds === 30) fbq('trackCustom', 'InteresElevado');
+        if(typeof gtag !== 'undefined') gtag('event', `tiempo_${seconds}s`, { 'event_category': 'Engagement' });
+    }, seconds * 1000);
+});
+</script>
 <footer style="padding: 40px 20px; text-align: center; color: #666; font-size: 13px; background: #f9f9f9;">
     <p>© 2026 Quantum Audio® - Todos los derechos reservados.</p>
     <div style="margin-top: 10px;">
