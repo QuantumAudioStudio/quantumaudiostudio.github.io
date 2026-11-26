@@ -842,6 +842,160 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
         if(typeof gtag !== 'undefined') gtag('event', `tiempo_${seconds}s`, { 'event_category': 'Engagement' });
     }, seconds * 1000);
 });
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Porcentajes de scroll (25%, 50%, 75%, 90%)
+  const milestones = [25, 50, 75, 90];
+  const firedScroll = new Set();
+
+  function trackScrollDepth() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) return;
+
+    const percent = Math.round((window.scrollY / docHeight) * 100);
+
+    milestones.forEach(m => {
+      if (percent >= m && !firedScroll.has(m)) {
+        firedScroll.add(m);
+
+        if (typeof gtag === 'function') {
+          gtag('event', `scroll_${m}`, {
+            event_category: 'Scroll Depth',
+            scroll_percent: m
+          });
+        }
+
+        if (typeof fbq === 'function' && m >= 50) {
+          fbq('trackCustom', `Scroll_${m}`);
+        }
+      }
+    });
+  }
+
+  window.addEventListener('scroll', trackScrollDepth, { passive: true });
+  trackScrollDepth();
+
+  // 2. Visibilidad real de secciones clave con IntersectionObserver
+  const sectionsToTrack = [
+    { selector: '.vs-youtube-section', name: 'comparativa_youtube' },
+    { selector: '#comprar', name: 'seccion_oferta' },
+    { selector: '.guarantee-section', name: 'seccion_garantia' },
+    { selector: '.faq-wrapper', name: 'seccion_faq' }
+  ];
+
+  const seenSections = new Set();
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionName = entry.target.dataset.trackSection;
+          if (sectionName && !seenSections.has(sectionName)) {
+            seenSections.add(sectionName);
+
+            if (typeof gtag === 'function') {
+              gtag('event', `ver_${sectionName}`, {
+                event_category: 'Section Visibility',
+                section_name: sectionName
+              });
+            }
+
+            if (typeof fbq === 'function' && sectionName === 'seccion_oferta') {
+              fbq('trackCustom', 'VioOferta');
+            }
+
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, {
+      threshold: 0.35 // Se dispara cuando al menos el 35% de la sección es visible
+    });
+
+    sectionsToTrack.forEach(item => {
+      const el = document.querySelector(item.selector);
+      if (el) {
+        el.dataset.trackSection = item.name;
+        observer.observe(el);
+      }
+    });
+  }
+});
+document.addEventListener('DOMContentLoaded', () => {
+  const GA_MEASUREMENT_ID = 'G-R8R4BTYSG5';
+  let maxScrollPercent = 0;
+  let exitSent = false;
+
+  // 1. Llevar el registro del porcentaje máximo de scroll alcanzado
+  function updateMaxScroll() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) return;
+
+    const currentPercent = Math.min(100, Math.max(0, Math.round((window.scrollY / docHeight) * 100)));
+    if (currentPercent > maxScrollPercent) {
+      maxScrollPercent = currentPercent;
+    }
+  }
+
+  window.addEventListener('scroll', updateMaxScroll, { passive: true });
+  updateMaxScroll();
+
+  // 2. Evento al abrir una pregunta del FAQ
+  document.querySelectorAll('.faq-question').forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const questionText = button.textContent.replace(/^\+\s*/, '').trim();
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'faq_click', {
+          event_category: 'FAQ',
+          faq_index: index + 1,
+          faq_question: questionText.slice(0, 100)
+        });
+      }
+
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'AbrioFAQ', {
+          pregunta: questionText.slice(0, 80)
+        });
+      }
+    });
+  });
+
+  // 3. Envío del porcentaje máximo alcanzado al salir de la página (sendBeacon)
+  function sendMaxScrollOnExit() {
+    if (exitSent || maxScrollPercent === 0) return;
+    exitSent = true;
+
+    const clientId = `${Date.now()}.${Math.floor(Math.random() * 1000000000)}`;
+    const params = new URLSearchParams({
+      v: '2',
+      tid: GA_MEASUREMENT_ID,
+      cid: clientId,
+      en: 'scroll_max_salida',
+      'epn.max_scroll_percent': String(maxScrollPercent),
+      dl: window.location.href,
+      dt: document.title
+    });
+
+    const endpoint = `https://www.google-analytics.com/g/collect?${params.toString()}`;
+    const beaconOk = typeof navigator.sendBeacon === 'function' && navigator.sendBeacon(endpoint);
+
+    if (!beaconOk && typeof gtag === 'function') {
+      gtag('event', 'scroll_max_salida', {
+        event_category: 'Scroll Depth',
+        max_scroll_percent: maxScrollPercent,
+        transport_type: 'beacon'
+      });
+    }
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      sendMaxScrollOnExit();
+    }
+  });
+
+  window.addEventListener('pagehide', sendMaxScrollOnExit);
+});
 </script>
 <footer style="padding: 40px 20px; text-align: center; color: #666; font-size: 13px; background: #f9f9f9;">
     <p>© 2026 Quantum Audio® - Todos los derechos reservados.</p>
