@@ -441,7 +441,7 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
     <div class="hero-content">
         <h1>Recupera a tu ex antes de que alguien más ocupe tu lugar</h1>
         <p>Rompe el contacto cero de tu ex en tiempo record y haz que te suplique volver en tan solo 15 minutos al día. Por tiempo limitado obtén un <strong>descuento especial del 70%</strong> y recupera el control de la relación.</p>
-        <a href="https://pay.hotmart.com/N107880319A" class="cta-btn" onclick="gtag('event', 'click_hero', {'seccion': 'header_hero'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
+        <a href="https://pay.hotmart.com/T108699369P" class="cta-btn" onclick="gtag('event', 'click_hero', {'seccion': 'header_hero'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
             Obtener Descuento Ahora
         </a>
         <div class="palabra">
@@ -648,7 +648,7 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
             </div>
 
             <div class="testimonial-card">
-                <p class="testimonial-text">"Yo utilicé esta frecuencia durante 10 días, aunque no ha vuelto mi ex, esta frecuencia me ayudó a encontrar una paz que nunca había experimentado antes, no sé ni como describirlo."</p>
+                <p class="testimonial-text">"Yo utilicé esta frecuencia durante 10 días, aunque todavía no ha vuelto mi ex, esta frecuencia me ayudó a encontrar una paz que nunca había experimentado antes, no sé ni como describirlo."</p>
                 <div class="testimonial-author">
                     <img src="https://i.pravatar.cc/150?u=3" class="author-img" alt="Cliente Elizabeth E." width="150" height="150" loading="lazy">
                     <div class="author-info">
@@ -689,13 +689,13 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
         <p class="old-price">$99.90 USD</p>
         <p class="new-price">$29<span>.97 USD</span></p>
         
-        <a href="https://pay.hotmart.com/N107880319A" id="main-cta" class="cta-link" onclick="gtag('event', 'iniciarpago_cta', {'seccion': 'cta'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
+        <a href="https://pay.hotmart.com/T108699369P" id="main-cta" class="cta-link" onclick="gtag('event', 'iniciarpago_cta', {'seccion': 'cta'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
             ¡OBTENER MI ACCESO AHORA!
         </a>
         <div id="payment-options">
             <span class="payment-hint">Selecciona tu método de pago seguro:</span>
             
-            <a href="https://pay.hotmart.com/N107880319A" class="mp-button-premium" onclick="fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'}); gtag('event', 'click_pago', {'metodo': 'mercado_pago'});">
+            <a href="https://pay.hotmart.com/T108699369P" class="mp-button-premium" onclick="fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'}); gtag('event', 'click_pago', {'metodo': 'mercado_pago'});">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Mercado_Pago.svg" alt="Pagar con Mercado Pago" width="200" height="50" style="height: 50px; width: auto; pointer-events: none;" loading="lazy" decoding="async">
             </a>
 
@@ -791,7 +791,7 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
 </section>
 
 <div class="mid-cta-wrapper">
-    <a href="https://pay.hotmart.com/N107880319A" class="btn-secondary-cta" onclick="gtag('event', 'click_boton_nuevo', {'seccion': 'post_faq'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
+    <a href="https://pay.hotmart.com/T108699369P" class="btn-secondary-cta" onclick="gtag('event', 'click_boton_nuevo', {'seccion': 'post_faq'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
         ¡QUIERO ACELERAR EL REGRESO DE MI EX AHORA!
     </a>
 </div>
@@ -828,7 +828,7 @@ src="https://www.facebook.com/tr?id=4534011316829203&ev=PageView&noscript=1"
     </div>
     <div class="final">
         <p>¿Listo para acelerar el regreso de tu ex y romper el silencio?</p>
-        <a class="botonfinal" href="https://pay.hotmart.com/N107880319A" onclick="gtag('event', 'click_oferta_final', {'seccion': 'post_faq'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
+        <a class="botonfinal" href="https://pay.hotmart.com/T108699369P" onclick="gtag('event', 'click_oferta_final', {'seccion': 'post_faq'}); fbq('track', 'InitiateCheckout', {value: 29.97, currency: 'USD'});">
             ¡SÍ, QUIERO MI ACCESO AHORA!
         </a>
     </div>
@@ -874,36 +874,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, seconds * 1000);
   });
 });
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.faq-question').forEach((button, index) => {
-    button.addEventListener('click', () => {
-      const faqItem = button.parentElement;
-      if (!faqItem) return;
-
-      faqItem.classList.toggle('active');
-
-      // Solo dispara el evento cuando se ABRE la pregunta (no cuando se cierra)
-      if (faqItem.classList.contains('active')) {
-        const questionText = button.textContent.replace(/^\+\s*/, '').trim();
-
-        if (typeof gtag === 'function') {
-          gtag('event', 'faq_abierta', {
-            event_category: 'FAQ',
-            faq_numero: index + 1,
-            faq_pregunta: questionText.slice(0, 100)
-          });
-        }
-
-        if (typeof fbq === 'function') {
-          fbq('trackCustom', 'AbrioFAQ', {
-            pregunta: questionText.slice(0, 80)
-          });
-        }
-      }
-    });
-  });
-});
-
 
 </script>
 <footer style="padding: 40px 20px; text-align: center; color: #666; font-size: 13px; background: #f9f9f9;">
